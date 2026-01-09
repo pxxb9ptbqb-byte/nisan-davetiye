@@ -1,0 +1,325 @@
+{\rtf1\ansi\ansicpg1254\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13240\viewh16280\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \shad\shadx0\shady30\shadr200\shado85 \shadc0 <!DOCTYPE html>\
+<html lang="tr">\
+<head>\
+    <meta charset="UTF-8">\
+    <title>Sinem & Hasan \'96 Ni\uc0\u351 an Davetiyesi</title>\
+    <meta name="viewport" content="width=device-width, initial-scale=1">\
+\
+    <style>\
+        * \{\
+            box-sizing: border-box;\
+            margin: 0;\
+            padding: 0;\
+        \}\
+\
+        body \{\
+            font-family: "Georgia", "Times New Roman", serif;\
+            background-color: #f5f1e8;\
+            color: #4a4035;\
+        \}\
+\
+        .screen \{\
+            min-height: 100vh;\
+            width: 100%;\
+            display: none;\
+        \}\
+\
+        .screen.active \{\
+        display: flex;\
+        \}\
+\
+        /* ZARF EKRANI */\
+        #envelope-screen \{\
+            background-image: url("zarf-gorseliniz.jpg");\
+            background-size: cover;\
+            background-position: center;\
+            justify-content: center;\
+            align-items: center;\
+            cursor: pointer;\
+            position: relative;\
+        \}\
+\
+        #envelope-overlay \{\
+            position: absolute;\
+            bottom: 12%;\
+            width: 100%;\
+            text-align: center;\
+            font-size: 1.6rem;\
+            color: #8a7a6a;\
+        \}\
+\
+        #envelope-screen::after \{\
+            content: "Devam etmek i\'e7in zarfa dokunun";\
+            position: absolute;\
+            bottom: 3%;\
+            width: 100%;\
+            text-align: center;\
+            font-size: 0.9rem;\
+            color: #b0a393;\
+        \}\
+\
+        /* DAVET\uc0\u304 YE EKRANI GENEL */\
+        #invite-screen \{\
+            flex-direction: column;\
+        \}\
+\
+        .hero \{\
+            position: relative;\
+            width: 100%;\
+            min-height: 70vh;\
+            background-image: url("hero-gorseliniz.jpg");\
+            background-size: cover;\
+            background-position: center;\
+            display: flex;\
+            align-items: flex-end;\
+            justify-content: center;\
+        \}\
+\
+        .hero-overlay \{\
+            width: 100%;\
+            padding: 30px 20px 40px;\
+            background: linear-gradient(to top, rgba(245,241,232,0.95), rgba(245,241,232,0.2));\
+            text-align: center;\
+        \}\
+\
+        .names \{\
+            font-size: 2.2rem;\
+            letter-spacing: 0.15rem;\
+            margin-bottom: 10px;\
+        \}\
+\
+        .subtitle \{\
+            font-size: 1rem;\
+            margin-bottom: 5px;\
+        \}\
+\
+        .date \{\
+            font-size: 1.1rem;\
+            margin-bottom: 10px;\
+        \}\
+\
+        .divider \{\
+            width: 70px;\
+            height: 1px;\
+            margin: 10px auto 20px;\
+            background-color: #b49a7d;\
+        \}\
+\
+        .container \{\
+            max-width: 900px;\
+            margin: 0 auto;\
+            padding: 30px 20px 60px;\
+            text-align: center;\
+        \}\
+\
+        h2 \{\
+            font-size: 1.4rem;\
+            margin-bottom: 10px;\
+        \}\
+\
+        p \{\
+            font-size: 0.95rem;\
+            line-height: 1.6;\
+            margin-bottom: 10px;\
+        \}\
+\
+        /* GER\uc0\u304  SAYIM */\
+        #countdown \{\
+            display: flex;\
+            justify-content: center;\
+            gap: 15px;\
+            margin-top: 20px;\
+            flex-wrap: wrap;\
+        \}\
+\
+        .time-box \{\
+            min-width: 70px;\
+            padding: 10px 8px;\
+            border-radius: 10px;\
+            background-color: #f5f1e8;\
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);\
+        \}\
+\
+        .time-number \{\
+            font-size: 1.4rem;\
+            font-weight: bold;\
+        \}\
+\
+        .time-label \{\
+            font-size: 0.8rem;\
+            text-transform: uppercase;\
+            letter-spacing: 0.05rem;\
+            color: #8a7a6a;\
+        \}\
+\
+        /* V\uc0\u304 DEO B\'d6L\'dcM\'dc */\
+        .video-section \{\
+            margin-top: 35px;\
+        \}\
+\
+        .video-section video \{\
+            max-width: 100%;\
+            border-radius: 16px;\
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);\
+        \}\
+\
+        /* KONUM B\'d6L\'dcM\'dc */\
+        .map-section \{\
+            margin-top: 40px;\
+        \}\
+\
+        .map-frame \{\
+            margin-top: 15px;\
+            border-radius: 16px;\
+            overflow: hidden;\
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);\
+        \}\
+\
+        iframe \{\
+            border: 0;\
+            width: 100%;\
+            height: 320px;\
+        \}\
+\
+        /* MOB\uc0\u304 L AYARLAR */\
+        @media (max-width: 600px) \{\
+            .names \{\
+                font-size: 1.8rem;\
+            \}\
+            .hero-overlay \{\
+                padding: 25px 15px 30px;\
+            \}\
+            .container \{\
+                padding: 25px 15px 50px;\
+            \}\
+            iframe \{\
+                height: 260px;\
+            \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+\
+<!-- ZARF EKRANI -->\
+<section id="envelope-screen" class="screen active">\
+    <div id="envelope-overlay"></div>\
+</section>\
+\
+<!-- DAVET\uc0\u304 YE EKRANI -->\
+<section id="invite-screen" class="screen">\
+    <div class="hero">\
+        <div class="hero-overlay">\
+            <div class="names">S\uc0\u304 NEM & HASAN</div>\
+            <div class="subtitle">Ni\uc0\u351 an t\'f6renimize sizi de yan\u305 m\u305 zda g\'f6rmekten mutluluk duyar\u305 z.</div>\
+            <div class="divider"></div>\
+            <div class="date">19 Nisan 2026 \'95 Pazar</div>\
+            <div class="subtitle">Ba\uc0\u351 iskele / Kocaeli</div>\
+        </div>\
+    </div>\
+\
+    <div class="container">\
+        <!-- GER\uc0\u304  SAYIM -->\
+        <section>\
+            <h2>Ni\uc0\u351 an\u305 m\u305 za Kalan S\'fcre</h2>\
+            <p>Bu \'f6zel g\'fcne birlikte geri sayal\uc0\u305 m.</p>\
+            <div id="countdown">\
+                <div class="time-box">\
+                    <div class="time-number" id="days">0</div>\
+                    <div class="time-label">G\'fcn</div>\
+                </div>\
+                <div class="time-box">\
+                    <div class="time-number" id="hours">0</div>\
+                    <div class="time-label">Saat</div>\
+                </div>\
+                <div class="time-box">\
+                    <div class="time-number" id="minutes">0</div>\
+                    <div class="time-label">Dakika</div>\
+                </div>\
+                <div class="time-box">\
+                    <div class="time-number" id="seconds">0</div>\
+                    <div class="time-label">Saniye</div>\
+                </div>\
+            </div>\
+        </section>\
+\
+        <!-- V\uc0\u304 DEO -->\
+        <section class="video-section">\
+            <h2>K\uc0\u305 sa Bir Video</h2>\
+            <p>Bu g\'fcn\'fc bizimle hayal edin.</p>\
+            <video src="intro-video.mp4" controls preload="metadata"></video>\
+        </section>\
+\
+        <!-- KONUM -->\
+        <section class="map-section">\
+            <h2>Konum Bilgisi</h2>\
+            <p>Ba\uc0\u351 iskele, Kocaeli b\'f6lgesinde ger\'e7ekle\u351 ecektir. Detayl\u305  konum i\'e7in haritay\u305  kullanabilirsiniz.</p>\
+            <div class="map-frame">\
+                <!-- \uc0\u304 stersen buradaki embed kodunu kendi salonunun tam adresine g\'f6re Google Maps\'92ten de\u287 i\u351 tirebilirsin -->\
+                <iframe\
+                    src="https://www.google.com/maps/embed?pb=!1m2!1s0x14cab0a4f7c9a7bd%3A0x3c1a7c1d7f5a2e4d!2sBa%C5%9Fiskele%2C%20Kocaeli"\
+                    loading="lazy"\
+                    referrerpolicy="no-referrer-when-downgrade">\
+                </iframe>\
+            </div>\
+        </section>\
+    </div>\
+</section>\
+\
+<script>\
+    // ZARF \uc0\u8594  DAVET\u304 YE GE\'c7\u304 \u350 \u304 \
+    const envelopeScreen = document.getElementById("envelope-screen");\
+    const inviteScreen = document.getElementById("invite-screen");\
+\
+    envelopeScreen.addEventListener("click", () => \{\
+        envelopeScreen.classList.remove("active");\
+        envelopeScreen.style.opacity = "1";\
+        envelopeScreen.style.transition = "opacity 0.8s ease";\
+\
+        // K\'fc\'e7\'fck bir fade efekti\
+        envelopeScreen.style.opacity = "0";\
+        setTimeout(() => \{\
+            envelopeScreen.style.display = "none";\
+            inviteScreen.classList.add("active");\
+        \}, 800);\
+    \});\
+\
+    // GER\uc0\u304  SAYIM \'96 19 Nisan 2026 19:00 i\'e7in ayarlad\u305 m, istersen saati de\u287 i\u351 tir\
+    const targetDate = new Date("2026-04-19T19:00:00+03:00").getTime();\
+\
+    function updateCountdown() \{\
+        const now = new Date().getTime();\
+        const distance = targetDate - now;\
+\
+        if (distance <= 0) \{\
+            document.getElementById("days").textContent = "0";\
+            document.getElementById("hours").textContent = "0";\
+            document.getElementById("minutes").textContent = "0";\
+            document.getElementById("seconds").textContent = "0";\
+            return;\
+        \}\
+\
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));\
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);\
+\
+        document.getElementById("days").textContent = days;\
+        document.getElementById("hours").textContent = hours;\
+        document.getElementById("minutes").textContent = minutes;\
+        document.getElementById("seconds").textContent = seconds;\
+    \}\
+\
+    updateCountdown();\
+    setInterval(updateCountdown, 1000);\
+</script>\
+\
+</body>\
+</html>\
+}
